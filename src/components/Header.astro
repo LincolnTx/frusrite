@@ -1,0 +1,46 @@
+---
+import Container from "./Container.astro";
+---
+
+<header>
+    <nav class="absolute z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent">
+        <Container>
+            <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap md:py-4">
+                <div class="relative z-20 flex w-full justify-between md:px-0 lg:2:max">
+                    <a href="/#home" aria-label="logo" class="flex items-center-space-x-2">
+                        <div aria-hidden="true" class="flex space-x-1">
+                            <div class="h-4 w-4 rounded-full bg-gray-900 dark:bg-white"></div>
+                            <div class="h-6 w-2 bg-primary"></div>
+                        </div>
+                        <span class="text 2x1 font-bold text-gray-900 dark:text-white">Frusrite</span>
+                    </a>
+
+                    <div class="relative flex max-h-10 items-center lg:hidden">
+                        <button aria-label="humburger" id="humburger" class="relative -mr-6 p-6">
+                            <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
+                            <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </Container>
+    </nav>
+</header>
+
+<style>
+    #toggle_nav:checked ~ div #hamburger #line {
+        @apply translate-y-1.5 rotate-45;
+    }
+
+    #toggle_nav:checked ~ div #hamburger #line2 {
+        @apply -translate-y-1 -rotate-45;
+    }
+
+    .toggle div:first-child {
+        @apply translate-y-1.5 rotate-45;
+    }
+
+    .toggle div:last-child {
+        @apply -translate-y-1 -rotate-45;
+    }
+</style>
