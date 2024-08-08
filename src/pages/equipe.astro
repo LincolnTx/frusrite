@@ -1,0 +1,78 @@
+---
+import Card from "../components/Card.astro";
+import Container from "../components/Container.astro";
+import MainContainer from "../components/MainContainer.astro";
+import Layout from "../layouts/Layout.astro";
+
+interface Member {
+	name: string;
+	facebook: string;
+	instagram: string;
+	email: string;
+	locale: string;
+	description: string;
+	pic: string;
+}
+
+const members: Member[] = [
+{
+	name: 'Raphael Romanelli',
+	facebook: 'https://www.facebook.com/raphael.r2ao',
+	instagram: 'https://www.instagram.com/raphaelr2ao/',
+	email: 'raphaelr2ao@gmail.com',
+	locale: 'Ilicínea, MG - Brasil',
+	description: 'Idealizador da Frusrite, responsável pelas ideias base, desenvolvimento, divulgação, design, testagem e mídias digitais. Desde 2009, Raphael estuda e faz publicações sobre o trabalho de John Frusciante por meio da John Frusciante effects (www.jfeffects.com.br) - sobretudo sobre guitarras, pedais, amplificadores e timbres. No site são mais de 1.000 publicações sobre o tema e muitas entrevistas exclusivas - Dave Lee, Robbie "Rule" Allen, Jack Sherman, isso só para citar algumas delas.',
+	pic: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-IEUIVTF1N7jycIo-gmINbypy91hN1Hzwvg5VhKeYg344H_xTtHou30pN1h__gxItLeG319kWWNNQNCadWPc1Oo8IthdQwBvZadX3GYOq9daFE5OkzMJW1i9jwtvoDhozpgwfNqkTsnO9kg5-x_L2myey4aXmKK8pulJR-uULyVv4NHXSMiOGecUxcQ/s320/IMG_20221006_120001_817.jpg'
+},
+
+{
+	name: 'Thiago Ferri',
+	facebook: 'https://www.facebook.com/thiago.ferri.7',
+	instagram: 'https://www.instagram.com/tethinhas/',
+	email: 'thiago.ferri@hotmail.com',
+	locale: 'Osasco, SP - Brasil',
+	description: 'Criador e as mãos por trás da Ferri Custom FX, na Frusrite é responsável pelo desenvolvimento, construção, design, inovações e suporte dos nossos clientes. Ferri cria e constrói pedais desde 2014, acreditando já ter produzido mais de 600 pedais na sede da sua empresa em Osasco-SP.',
+	pic: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjv6Ym2beqxPjynZmBL_lwyX0s30USkzqsnN6Mv4pYiljs1MHxtMbKrsOfjiZHwytezcKuPX8RdfR-TMmncc6MqXEcXOPW3M65U0mDVw1SsJzIv5wc0RSBdTeorBmuC9jg77FS2V6aphd46XCP2LqbyoVVFpxtZw9cdOFAKv_of4bQ2UyeS--HbI1XqHw/s320/IMG_20221006_160103_079.jpg'
+},
+{
+	name: 'Bruno Portugal',
+	facebook: 'https://www.facebook.com/brunoportu',
+	instagram: 'https://www.instagram.com/brunoportugal/',
+	email: 'brunogportugal@gmail.com',
+	locale: 'Curitiba, PR - Brasil',
+	description: 'Guitarrista desde 2009, na Frusrite é responsável pelos reviews, vídeos, desenvolvimento, design, testagem, vendas e contato com os nossos clientes. É membro criador da The Red Hot Experience e tem experiência de mais de 1.000 shows - em cerca de 20 países - com tributos ao Red Hot Chili Peppers, sendo bastante conceituado quando o assunto é timbre.',
+	pic: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHUEYZL7-KuC8GhmaHVn6h8BmjCF0ktNJUDP7mPbteoN6cuJL-niCOA8PqriorZvTICSr7h2e4wvatcIP9Cc8W_SRyJI3xGdbPkNGEcmY2a_2P96Q15Q6e4pXTNI8Dt9oHF7mRg_n_FaSkq86dKJ0n4qeS2qW6HpmeALgkqLs292IWdTYYr9r-46ctEQ/s320/IMG-20220310-WA0012.jpg'
+},
+];
+---
+
+<Layout title="Frusrite">
+    <MainContainer>
+        <main class="space-y-40 mb-40">
+            <div class="text-gray-600 dark:text-gray-300" id="equipe">
+                <Container>
+                    <div class="mb-20 space-y-4 px-6 md:px-0">
+                        <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+                            Equipe
+                        </h2>
+                    </div>
+                    <div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
+                        {
+                            members.map((member) => (
+                                <Card 
+                                name={member.name}
+                                facebook={member.facebook}
+                                instagram={member.instagram}
+                                email={member.email}
+                                locale={member.locale}
+                                description={member.description}
+                                pic={member.pic}
+                                />
+                            ))
+                        }
+                    </div>
+                </Container>
+            </div>
+        </main> 
+    </MainContainer>
+</Layout>
