@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import MainContainer from "../components/MainContainer.astro";
+---
+
+<Layout title="Frusrite">
+    <MainContainer>
+        <div class="flex items-center h-[80vh]" id="compre">
+            <Container>
+                <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:space-y-0 lg:gap-12 lg:items-center">
+                    <div class="md:5/12 lg:w-1/2">
+                        <img 
+                            src="./images/frusrite-buy.jpg" 
+                            alt="pedal frus axis"
+                            loading="lazy"
+                            width=""
+                            height=""
+                            class="w-full rounded-xl" 
+                        />
+                    </div>
+                    <div class="md:7/12 lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+                            Compre
+                        </h2>
+                        <p class="my-8 text-gray-600 dark:text-gray-300">
+                            Todos os nossos pedais possuem lista de espera. Para participar, por favor, mande uma mensagem com o(s) nome(s) do pedal(is) que você deseja no 
+                            <a href="https://api.whatsapp.com/send/?phone=5541991912258&text&type=phone_number&app_absent=0" target="_blank" class="flex items-center space-x-3 transition hover:text-primary">WhatsApp (41) 99191-2258.</a>
+                            <br>
+                            De tempos em tempos, abrimos lotes dos nossos pedais com pré-venda e avisamos aos primeiros colocados da lista de espera, com isso, 
+                            fazemos a venda e estipulamos um prazo de envio - cerca de 15 ou 60 dias. 
+                            O nosso Instagram é um grande aliado dos clientes na divulgação antecipada de quais serão os próximos lotes e as quantidades disponíveis, siga 
+                            <a href="https://www.instagram.com/frusrite/" target="_blank" class="space-x-4 transition hover:text-primary">@frusrite</a>.
+                        </p>
+                    </div>
+                </div>
+            </Container>
+        </div>
+    </MainContainer>
+</Layout>
