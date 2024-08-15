@@ -4,31 +4,20 @@ import MainContainer from "../components/MainContainer.astro";
 import Container from "../components/Container.astro";
 ---
 <script>
-	const emailSpan = document.getElementById("frusEmail") as HTMLSpanElement;
-	
-	function copyToClipboard() {
-		const textToCopy = emailSpan.textContent
-		var textInput = document.createElement('input');
-		document.body.appendChild(textInput)
-		textInput.value = textToCopy ?? '';
-		
-		textInput.select();
-		textInput.setSelectionRange(0, 9999);
-		navigator.clipboard.writeText(textInput.value)
+	import { copyToClipboard } from "../lib/textUtil";
 
-		textInput.remove();
-	}
+	const emailSpan = document.getElementById("frusEmail") as HTMLSpanElement;
 
 	emailSpan.addEventListener("click", (event) => {
 		event.preventDefault();
-		copyToClipboard();
+		copyToClipboard(emailSpan);
 	});
 </script>
 
 <Layout title="Frusrite">
 	<MainContainer>
 		<div id="solution"	class="flex items-center h-[80vh]">
-			<Container clss="h-screen">
+			<Container>
 				<div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
 					<div class="md:5/12 lg:w-1/2 ">
 						<img 
