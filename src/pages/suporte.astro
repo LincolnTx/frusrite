@@ -7,19 +7,18 @@ import MainContainer from "../components/MainContainer.astro";
 <script>
     import { copyToClipboard } from "../lib/textUtil";
 
-    const elementsToCopy = document.getElementsByClassName('info-copy');
-
-    for (const element of elementsToCopy) {
-        element.addEventListener('click', (event) => {
-            event.preventDefault();
-            copyToClipboard(element as HTMLElement);
-        });
-    }
+    const elementCopy = document.getElementById('upport-contact') as HTMLSpanElement;
+    
+    elementCopy.addEventListener('click', (event) => {
+        event.preventDefault();
+        copyToClipboard(elementCopy);
+    });
+    
 </script>
 
 <Layout title="frusrite">
     <MainContainer>
-        <div class="flex items-center h-[80vh]" id="support">
+        <div class="flex items-center md:h-[80vh]" id="support">
             <Container>
                 <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
                     <div class="md:5/12 lg:w-1/2">
@@ -45,7 +44,11 @@ import MainContainer from "../components/MainContainer.astro";
                                     <span id="ferriEmail" class="info-copy flex items-center space-x-3 transition hover:text-primary cursor-pointer">
                                         frusrite@gmail.com
                                     </span>
-                                    <span class="flex items-center space-x-3 transition hover:text-primary cursor-pointer">WhatsApp: <span class="info-copy">+55 (11) 98395-7114</span>.</span>
+                                    <span class="flex flex-wrap items-center space-x-3 transition hover:text-primary cursor-pointer">
+                                        WhatsApp: &nbsp 
+                                        <span id="support-contact"class="info-copy">+55 (11) 98395-7114</span>
+                                        .
+                                    </span>
                                 </div>
                             </div>
 
@@ -53,7 +56,7 @@ import MainContainer from "../components/MainContainer.astro";
                                 <Badge color="teal" type="location" />
                                 <div class="w-5/6">
                                     <h3 class="font-semibold text:lg text-gray-700 dark:text-teal-300">Frusrite</h3>
-                                    <span class="info-copy flex items-center space-x-3">
+                                    <span class="flex items-center space-x-3">
                                         Endereço: Rua Santa Teresinha - N° 580 <br>
                                         Bairro: Vila Yara Cep: 06026-040. <br>
                                         Cidade: Osasco - SP - Brasil

@@ -29,7 +29,8 @@ const links = [
     const navlinks = document.querySelector("#navlinks");
     const hamburger = document.querySelector("#hamburger");
     const layer = document.querySelector("#navLayer");
-    const links = [...navlinks.querySelector("ul").children];
+     // @ts-ignore: Array convert
+    const links = [...navlinks?.querySelector("ul")?.children];
     
     hamburger?.addEventListener("click", () => {
         isToggled = !isToggled;
