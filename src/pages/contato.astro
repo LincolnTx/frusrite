@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import MainContainer from "../components/MainContainer.astro";
+---
+<script>
+    import { copyToClipboard } from "../lib/textUtil";
+
+    const emailElement = document.getElementById('frusEmail') as HTMLSpanElement;
+
+    emailElement.addEventListener('click', (event) => {
+        event.preventDefault();
+        copyToClipboard(emailElement);
+    });
+</script>
+
+<Layout title="frusrite">
+    <MainContainer>
+        <div class="flex items-center h-[80vh]" id="contacts">
+            <Container>
+                <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+                    <div class="md:5/12 lg:w-1/2">
+                        <img 
+                            src="./images/frusrite_contact.jpg" 
+                            alt="imagem da pagina de contato"
+                            loading="lazy"
+                            width=""
+                            height=""
+                            class="w-full rounded-xl"
+                        />
+                    </div>
+
+                    <div class="md:7/12 lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+                            Contato
+                        </h2>
+                        <p class="my-8 text-gray-600 dart:text-gray-300"> Você pode entrar em contato conosco por e-mail, whatsapp ou em nossas redes sociais</p>
+
+                        <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+                            <div class="mt-8 flex gap-4 md:items-center">
+                                <div class="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 m-auto text-indigo-500 dark:text-indigo-400">
+                                        <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clip-rule="evenodd" />
+                                      </svg> 
+                                </div>
+                                <div class="w-5/6">
+                                    <h3 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">Entre em contado</h3>
+                                    <span id="frusEmail" class="flex items-center space-x-3 transition hover:text-primary cursor-pointer">
+                                        frusrite@gmail.com
+                                    </span>
+                                    <a href="https://api.whatsapp.com/send/?phone=5541991912258&text&type=phone_number&app_absent=0" target="_blank" class="flex items-center space-x-3 transition hover:text-primary">WhatsApp (41) 99191-2258.</a>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 flex gap-4 md:items-center">
+                                <div class="w-12 h-12 flex gap-4 rounded-full bg-teal-100 dark:bg-teal-900/20">
+                                    <svg fill="currentColor" class="w-6 h-6 m-auto text-teal-600 dark:text-teal-400" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                            <g> <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"></path> 
+                                                <path d="M315.844,198.359c0.172-1.109,0.25-2.141,0.25-3.094c0-8.797-5.5-13.172-16.5-13.172c-5.281,0-8.844,0.906-10.688,2.688 c-1.875,1.812-3.156,5.391-3.906,10.75c-4.219-5.938-8.469-9.938-12.75-12.016c-3.938-1.891-9.578-2.828-16.875-2.828 c-18.797,0-35.109,9.562-48.875,28.672c-12.688,17.578-19.016,36.359-19.016,56.328c0,15.594,4.109,29.281,12.344,41.094 c9.125,13.016,21.062,19.516,35.766,19.516c12.594,0,24.688-4.516,36.266-13.547c5.219,9.031,14.141,13.547,26.734,13.547 c23.844,0,44.266-10.062,61.219-30.203C375.938,276.938,384,254.906,384,230.031c0-29.75-12.516-54.562-37.547-74.422 C323.266,137.219,296.75,128,266.844,128c-38.906,0-71.562,12.297-98.016,36.906C141.609,190.281,128,222.656,128,262.062 c0,40.266,13.953,71.188,41.828,92.781C194.859,374.297,227.688,384,268.344,384c17.312,0,34.188-2.703,50.656-8.141 c18.062-5.922,32.922-14.359,44.594-25.297c3.766-3.609,7.391-8,10.828-13.156c4.297-6.297,6.422-11.375,6.422-15.234 c0-2.922-1.016-5.531-3.078-7.828c-2.047-2.281-4.516-3.422-7.359-3.422c-5.391,0-9.922,1.906-13.625,5.672 c-6.109,6.562-10.656,11.562-13.594,15c-20,17.469-44.844,26.203-74.594,26.203c-31.906,0-57.438-7.828-76.578-23.484 c-20.922-17.109-31.375-41.625-31.375-73.531c0-30.969,9.938-56.844,29.859-77.625C210.406,162.391,235.484,152,265.703,152 c23.781,0,43.547,6.75,59.328,20.281c16.906,14.344,25.328,33.438,25.328,57.25c0,12.469-2.125,24.094-6.422,34.828 c-4.781,12.047-11.719,21.328-20.781,27.859c-6.812,4.891-12.141,7.344-16,7.344c-4.203,0-6.297-1.969-6.297-5.922 c0-1.641,1.078-9.203,3.281-22.719L315.844,198.359z M267.344,269.578c-7.734,21.453-15.969,32.188-24.688,32.188 c-13.031,0-19.547-8.312-19.547-24.953c0-12.922,3.734-27.469,11.234-43.688c8.734-19.141,18.672-28.703,29.844-28.703 c4.625,0,8.062,2.5,10.328,7.484c1.844,3.812,2.766,8.344,2.766,13.594C277.281,236.719,273.984,251.406,267.344,269.578z"></path> 
+                                            </g> 
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="w-5/6">
+                                    <h3 class="font-semibold text:lg text-gray-700 dark:text-teal-300"> Nossas redes sociais</h3>
+                                    <div id="socials">
+										<ul role="list" class="flex flex-wrap gap-2">
+											<li class="flex items-center space-x-3">
+												<a href="https://www.instagram.com/frusrite/" target="_blank" class="flex items-center space-x-3 transition hover:text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													class="w-5"
+													viewBox="0 0 20 20"
+												>
+													<path
+													d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+													/>
+												</svg>
+												</a>
+											</li>
+											<li class="flex items-center space-x-3">
+												<a href="https://www.facebook.com/frusrite" target="_blank" class="flex items-center space-x-3 transition hover:text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													class="w-5"
+													viewBox="0 0 20 20"
+												>
+													<path
+													d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+													/>
+												</svg>
+												</a>
+											</li>
+											<li class="flex items-center space-x-3">
+												<a href="https://www.youtube.com/@frusrite" target="_blank" class="flex items-center space-x-3 transition hover:text-primary">
+													<svg fill="currentColor" class="w-5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M29.398 5.928c-0.867-0.624-3.283-1.453-13.406-1.453-10.848 0-12.458 0.952-12.975 1.264-2.749 1.652-3.010 8.963-3.034 10.445 0.033 1.958 0.349 8.473 3.032 10.084 0.515 0.311 2.116 1.257 12.976 1.257 10.13 0 12.543-0.825 13.406-1.447 2.343-1.686 2.612-7.49 2.619-9.92-0.006-1.954-0.211-8.496-2.619-10.23zM28.23 24.456c-0.349 0.251-2.35 1.069-12.239 1.069-9.56 0-11.566-0.742-11.945-0.971-0.965-0.579-1.984-3.652-2.063-8.376 0.079-4.713 1.111-8.153 2.066-8.726 0.38-0.229 2.393-0.977 11.943-0.977 9.881 0 11.887 0.824 12.239 1.076 0.857 0.617 1.773 3.865 1.787 8.613-0.014 4.823-0.936 7.678-1.787 8.291zM22.513 15.213l-8.998-5.522c-0.309-0.187-0.695-0.191-1.008-0.014-0.315 0.178-0.509 0.511-0.509 0.871v11.045c0 0.36 0.194 0.694 0.509 0.871 0.152 0.086 0.322 0.129 0.491 0.129 0.178 0 0.358-0.048 0.516-0.143l8.998-5.524c0.3-0.181 0.483-0.506 0.483-0.856s-0.183-0.676-0.483-0.857zM13.999 19.822v-7.503l6.063 3.751z"></path> </g></svg>
+												</a>
+											</li>
+										</ul>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </div>
+    </MainContainer>
+</Layout>
