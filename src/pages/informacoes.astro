@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainContainer from "../components/MainContainer.astro";
+import FaqBox from "../components/faq-box.astro";
+import { fade } from "astro:transitions";
+
+interface Question {
+    title: string;
+    content: string;
+    defaultOpen: boolean;
+    extra?: string;
+}
+
+const questions: Question[] = [
+    {
+        title: "Como e onde são produzidos os pedais?",
+        content: "Todos os nossos pedais são feitos a mão por Thiago Ferri na sede da Ferri Custom FX em Osasco - SP no Brasil. Eles são construídos de maneira individual, com a seleção e a testagem de cada componente que integrará o circuito - além de possuírem uma montagem minuciosa e limpa, realizada com muito cuidado.",
+        defaultOpen: true,
+    },
+    {
+        title: "Todos os pedais são analógicos?",
+        content: "Sim! Todos os nossos pedais são 100% analógicos.",
+        defaultOpen: false,
+    },
+    {
+        title: "Como comprar os pedais?",
+        content: "Todos os nossos pedais possuem lista de espera para compra, para participar, por favor, mande uma mensagem com o nome do pedal que você deseja no WhatsApp",
+        extra: "(41) 99191-2258",
+        defaultOpen: false,
+    },
+    {
+        title: "Como funciona a lista de espera?",
+        content: "É uma lista que dá colocações aos interessados nos nossos pedais pela ordem de interesse. Esse é um procedimento totalmente sem custo ou compromisso, nossa equipe chama o interessado apenas na pré-venda do lote do produto que ele demonstrou interesse.",
+        defaultOpen: false,
+    },
+    {
+        title: "Como acontece a pré-venda?",
+        content: "De tempos em tempos, disponibilizamos lotes com certa unidades de pedais - isso é divulgado com antecedência em nosso Instagram. Na data da pré-venda chamamos as primeiras colocações da lista de espera e fazemos a venda e avisamos sobre o prazo de envio das unidades. Em caso de desistência de algum participante da lista de espera, passamos para os próximos colocados. ",
+        defaultOpen: false,
+    },
+    {
+        title: "Consigo parcelar o valor?",
+        content: "Sim. Pelo Mercado Pago você consegue parcelar em até 12 vezes com os juros da plataforma.",
+        defaultOpen: false,
+    },
+    {
+        title: "Qual é o prazo de envio após a finalização da pré-venda do lote?",
+        content: "O prazo varia de 15 a 60 dias, mas como os envios são semanais, sempre enviamos antes da finalização do tempo estipulado. Nossa única limitação são com os envios internacionais, pois só podemos fazer um a cada semana.",
+        defaultOpen: false,
+    },
+    {
+        title: "Vocês enviam pra qualquer lugar no mundo?",
+        content: "Sim, enviamos em para todos os lugares que as transportadoras estão dispostas a levar, até então já enviamos para 26 países no mundo.",
+        defaultOpen: false,
+    },
+    {
+        title: "Quais as empresas e os métodos de envio?",
+        content: "No Brasil na maioria das vezes usamos os Correios tendo os métodos PAC ou SEDEX, à escolha do cliente. Já para envios para o exterior usamos a UPS, a FedEx, a DHL, ou até mesmo o próprio Correios, depende do prazo e do valor de envio para o cliente.",
+        defaultOpen: false,
+    },
+    {
+        title: "Qual o tempo de garantia dos produtos?",
+        content: "Possuem seis meses de garantia. Contudo, fora desse tempo, qualquer problema que ocorra é só entrar em contato com a gente que auxiliamos da melhor forma possível e você acaba pagando apenas os fretes.",
+        defaultOpen: false,
+    }
+];
+---
+
+<Layout title="frusrite">
+    <MainContainer>
+        <div id="faq" class="flex flex-col items-center md:h-[80vh]">
+            <div class="md:7/12 lg:w-1/2">
+                <h2 class="ext-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+                    Dúvidas frequentes
+                </h2>
+                {
+                    questions.map((item) => (
+                    <div class="mt-8">
+                    
+                        <FaqBox 
+                            title={item.title} 
+                            content={item.content}
+                            defaultOpen={item.defaultOpen}
+                        />
+                    </div>
+                    ))
+                }
+            </div>
+        </div>
+    </MainContainer>
+</Layout>
