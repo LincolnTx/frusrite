@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import MainContainer from "../components/MainContainer.astro";
 import FaqBox from "../components/faq-box.astro";
 import { fade } from "astro:transitions";
+import Pagination from "../components/pagination.astro";
 
 interface Question {
     title: string;
@@ -10,6 +11,8 @@ interface Question {
     defaultOpen: boolean;
     extra?: string;
 }
+
+type PageOperations = 'next' | 'previous';
 
 const questions: Question[] = [
     {
@@ -64,6 +67,25 @@ const questions: Question[] = [
         defaultOpen: false,
     }
 ];
+
+const questionsPerPage = 4;
+const totalPages = Math.ceil(questions.length / questionsPerPage);
+let currentPage = 1;
+// console.log('pagina atual ', totalPages);
+const currentQuestions = getPageQuestions(currentPage);
+
+function getPageQuestions(page: number) {
+    const start = (page -1 ) * questionsPerPage;
+    return questions.slice(start, start + questionsPerPage);
+}
+
+function changePage(operation: PageOperations) {
+    if (operation === 'next') {
+        currentPage = currentPage + 1;
+    } else {
+        currentPage = currentPage - 1;
+    }
+}
 ---
 
 <Layout title="frusrite">
@@ -74,7 +96,7 @@ const questions: Question[] = [
                     Dúvidas frequentes
                 </h2>
                 {
-                    questions.map((item) => (
+                    currentQuestions.map((item) => (
                     <div class="mt-8">
                     
                         <FaqBox 
@@ -85,6 +107,21 @@ const questions: Question[] = [
                     </div>
                     ))
                 }
+                <div class="mt-8 flex justify-between">
+                    <Pagination totalPages={totalPages}/>
+                    <!-- {
+                        currentPage > 1 && 
+                        (
+                            <a href={`?page=${currentPage - 1 }`} class="text-blue-500 hover:underline">Página anterior</a>
+                        )
+                    }
+                    {
+                        currentPage < totalPages &&
+                        (
+                            <a href={`?page=${currentPage + 1}`} class="text-blue-500 hover:underline"> Próxima página</a>
+                        )
+                    } -->
+                </div>
             </div>
         </div>
     </MainContainer>
