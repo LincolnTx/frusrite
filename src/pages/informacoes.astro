@@ -86,6 +86,10 @@ function changePage(operation: PageOperations) {
         currentPage = currentPage - 1;
     }
 }
+
+function handleChildEvent(event) {
+    console.log('o evento chegou')
+}
 ---
 
 <Layout title="frusrite">
@@ -108,7 +112,7 @@ function changePage(operation: PageOperations) {
                     ))
                 }
                 <div class="mt-8 flex justify-between">
-                    <Pagination totalPages={totalPages}/>
+                    <Pagination totalPages={totalPages} on:child-event={handleChildEvent}/>
                     <!-- {
                         currentPage > 1 && 
                         (

@@ -8,19 +8,18 @@ interface Props {
 const { totalPages } = Astro.props;
 
 const pageButtons =  [...Array(totalPages)].fill(0);
-console.log('total pages', pageButtons.length)
+const currentPage = 1;
 ---
 <script>
     // classe bg-purple-900 text-white
-    const numberButtons = document.getElementsByClassName('number-selectors');
+    const pagesBox = document.getElementById('pages-available');
+    const numberButtons = pagesBox?.children;
     const previusButton = document.getElementById('previus-button');
     const nextButton = document.getElementById('next-button');
 
-    for(const button of numberButtons) {
+    for(const button of numberButtons as HTMLCollection) {
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            console.log('clicou')
-            button.setAttribute('selected', 'true');
             const numberSpan = button.querySelector('#page-value') as HTMLSpanElement;
             handlePageByNumber(Number(numberSpan.textContent), button as HTMLButtonElement)
             
@@ -28,12 +27,31 @@ console.log('total pages', pageButtons.length)
     }
 
     function handlePageByNumber(page: number, button: HTMLButtonElement) {
+      
+      const selected = button.classList.contains('selected');
 
+      if (!selected) {
+        button.classList.add('selected')
+        button.classList.add('bg-primary')
+        button.classList.add('text-white')
+        unselectOtherPages(button.id);
+      } 
+    }
+
+    function unselectOtherPages(selectedButtonId: string) {
+      for (const button of numberButtons as HTMLCollection) {
+        if (button.id === selectedButtonId) {
+          continue;
+        }
+        button.classList.remove('selected')
+        button.classList.remove('bg-primary')
+        button.classList.remove('text-white')
+      }
     }
 </script>
 
 <div class="flex items-center gap-4">
-    <button disabled
+    <button disabled={currentPage <= 1}
       class=" previus-button flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -42,14 +60,15 @@ console.log('total pages', pageButtons.length)
       </svg>
       Previous
     </button>
-    <div class="flex items-center gap-2">
+    <div id="pages-available" class="flex items-center gap-2">
         {
            pageButtons.map((item, index) => (
-            <PaginationButton  selected={index === 0} text={index + 1} data-selected={index === 0} />            
+            <PaginationButton id={index} selected={index === 0} text={index + 1}  />            
            ))
         }
     </div>
     <button
+      disabled={currentPage >= totalPages}
       class="next-button flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button">
       Next
