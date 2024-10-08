@@ -1,0 +1,58 @@
+---
+import FaqBox from "../../components/faq-box.astro";
+import MainContainer from "../../components/MainContainer.astro";
+import Pagination from "../../components/pagination.astro";
+import Layout from "../../layouts/Layout.astro";
+
+// @ts-ignore
+export async function getStaticPaths({ paginate }): Promise<any> {
+  const allQuestions = await Astro.glob('./*.md*');
+
+  return paginate(allQuestions, {
+    pageSize: 4,
+  })
+}
+
+// TODO: verificar pq o icone quebra quando troca de página
+const { page } = Astro.props;
+const pageInfo: any = page;
+const pathname = new URL(Astro.request.url).pathname.split('/');
+console.log(pathname)
+const firstPath = pathname[1];
+
+---
+
+
+<Layout title="frusrite">
+    <MainContainer>
+        <div id="faq" class="flex flex-col items-center md:h-[80vh]">
+            <div class="md:7/12 lg:w-1/2">
+                <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+                    Dúvidas frequentes
+                </h2>
+                {
+                    pageInfo.data.map((item: any) => (
+                    <div class="mt-8">
+                    
+                        <FaqBox 
+                            title={item.frontmatter.title} 
+                            content={item.frontmatter.content}
+                            defaultOpen={item.frontmatter.defaultOpen}
+                        />
+                    </div>
+                    ))
+                }
+                <div class="mt-8 flex justify-between">
+                    <Pagination 
+                        length={pageInfo.lastPage} 
+                        currentUrl={pageInfo.url.current} 
+                        currentPage={pageInfo.currentPage} 
+                        firstUrl={`/${firstPath}`} 
+                        prevUrl={pageInfo.url.prev} 
+                        nextUrl={pageInfo.url.next} 
+                    />
+                </div>
+            </div>
+        </div>
+    </MainContainer>
+</Layout>
