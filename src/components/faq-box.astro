@@ -3,30 +3,36 @@ interface Props {
     title: string;
     content: string;
     defaultOpen: boolean;
+    id: number;
 }
 
-const { content, title } = Astro.props;
+const { content, title , id, defaultOpen} = Astro.props;
 ---
 <script>
-    let isOpen = false;
-    const boxToggle = document.getElementsByClassName('question-toggle');
-    
-    for (const box of boxToggle) {
-        box.addEventListener('click', (event) => {
-            event.preventDefault();
-            const currentContent = box.querySelector('#content-toggle') as Element;
-            const open = box.getAttribute('defaultOpen');
-            console.log('default open', open);
-            const icon = box.querySelector('#arrow-icon-toggle') as Element;
-            toggleQuestionBox(currentContent, icon);
-        });
+    const questions = document.getElementsByClassName('question-toggle');
+    const questionBoxList = [];
+    for (const question of questions) {
+        const questionId = question.getAttribute('data-id')
+        const currentQuestion = document.getElementById(`question-toggle-${questionId}`)
+        questionBoxList.push(currentQuestion);
     }
-    
-    
-    function toggleQuestionBox(element: Element, icon: Element) {
-       isOpen = !isOpen;
-       console.log('novo open', isOpen)
 
+    questionBoxList.map(question => {
+        question?.addEventListener('click', (event) => {
+        
+            event.preventDefault();
+            const currentContent = question.querySelector('#content-toggle') as Element;
+            let isOpen = question.getAttribute('data-open') == "true";
+            const icon = question.querySelector('#arrow-icon-toggle') as Element;
+            
+            isOpen = !isOpen;
+            toggleQuestionBox(currentContent, icon, isOpen);
+            question.setAttribute('data-open', String(isOpen))
+        })
+    })
+    
+    
+    function toggleQuestionBox(element: Element, icon: Element, isOpen: boolean) {
        if (isOpen) {
         element.classList.remove('max-h-0');
         element.classList.add('max-h-96');
@@ -40,10 +46,11 @@ const { content, title } = Astro.props;
         icon.classList.remove('rotate-[180deg]');
         icon.classList.add('rotate-[270deg]');
        }
+       return isOpen;
     }
 </script>
 
-<div id="question-toggle" class="question-toggle break-inside-avoid aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none hover:bg-gray-50 hover:border-primary hover: dark:bg-gray-300 cursor-pointer">
+<div id=`question-toggle-${id}` data-id={id} data-open={`${defaultOpen}`} class="question-toggle break-inside-avoid aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none hover:bg-gray-50 hover:border-primary hover: dark:bg-gray-300 cursor-pointer">
 		<div class="flex justify-between items-center">
 		<div>
 			<h6 class="text-lg font-medium text-gray-700 dark:text-white">{title}</h6>
@@ -55,7 +62,7 @@ const { content, title } = Astro.props;
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="transition-all duration-500 rotate-[270deg]"
+            class=`${defaultOpen ? 'rotate-[180deg] ': 'rotate-[270deg] '} transition-all duration-500`
           >
             <path
                 d="M4.16732 12.5L10.0007 6.66667L15.834 12.5"
@@ -64,5 +71,5 @@ const { content, title } = Astro.props;
             </path>
           </svg>
 		</div>
-	<p id="content-toggle" class="mt-8 transition-height duration-300 overflow-hidden max-h-0">{content}</p>
+	<p id="content-toggle" class=`${defaultOpen ? 'max-h-96 ': 'max-h-0 '} mt-8 transition-height duration-300 overflow-hidden`>{content}</p>
 </div>
