@@ -25,13 +25,13 @@ const firstPath = pathname[1];
 <Layout title="frusrite">
     <MainContainer>
         <div id="faq" class="flex flex-col items-center md:h-[80vh]">
-            <div class="md:7/12 lg:w-1/2">
-                <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+            <div class="md:w-7/12 lg:w-1/2 w-full flex flex-col items-center">
+                <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl sm:text-xl">
                     Dúvidas frequentes
                 </h2>
                 {
                     pageInfo.data.map((item: any, index: number) => (
-                    <div class="mt-8">
+                    <div class="mt-8 sm:mt-4 w-full">
                     
                         <FaqBox 
                             title={item.frontmatter.title} 
