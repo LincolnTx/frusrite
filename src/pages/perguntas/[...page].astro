@@ -13,7 +13,6 @@ export async function getStaticPaths({ paginate }): Promise<any> {
   })
 }
 
-// TODO: verificar pq o icone quebra quando troca de página
 const { page } = Astro.props;
 const pageInfo: any = page;
 const pathname = new URL(Astro.request.url).pathname.split('/');
