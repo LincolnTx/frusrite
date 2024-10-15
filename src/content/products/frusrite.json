@@ -1,0 +1,16 @@
+{
+    "id": 1,
+    "title": "Frusrite",
+    "image": "/images/frusrite_01.jpg",
+    "summary": "O Frusrite é inspirado no Fuzzrite com transistores de germânio da Mosrite, que teve 250 unidades fabricadas entre 1965 e 1966.",
+    "main-image": "image.jpg",
+    "gallery": ["1", "2"],
+    "reviews": ["1", "2"],
+    "extra": {
+        "title": "teste",
+        "content": "teste"
+    },
+    "description": "O Frusrite é inspirado no Fuzzrite com transistores de germânio da Mosrite, que teve 250 unidades fabricadas entre 1965 e 1966. O nosso projeto é extremamente fiel a primeira versão do fuzz, desenvolvido por Ed Sanner. Contudo, adiciona melhorias ao circuito que trazem comodidade ao uso e nada influenciam no timbre original.O Frusrite conta com dois transistores de germânio japoneses da década de 1960, podendo ser alimentado com fontes 9V de centro negativo (padrão P4). O chaveamento do pedal é true bypass com indicação de acionamento com um LED vermelho, junto a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões (o original possuía capacitores cerâmicos que são imprecisos e colaboram para ruídos e sons estáticos), excelentes jacks, e acima de tudo: uma montagem feita 100% à mão. Além disso, o pedal preserva o visual vintage do Fuzzrite em uma carcaça menor que a original.Esse projeto foi realizado tendo como referência um desses Fuzzrite V1, que acabou aos pés de John Frusciante e foi usado com o Red Hot Chili Peppers na turnê de Stadium Arcadium entre 2006 e 2007 e em seu álbum solo The Empyrean de 2009."
+}
+
+    
