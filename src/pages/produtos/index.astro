@@ -1,8 +1,14 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type InferEntrySchema } from "astro:content";
 import Container from "../../components/Container.astro";
 import MainContainer from "../../components/MainContainer.astro";
 import Layout from "../../layouts/Layout.astro";
+
+export type Product = {
+  id: string;
+  collection: string;
+  data: InferEntrySchema<"products">;
+};
 
 // @ts-ignore
 export async function getStaticPaths(): Promise<any> {
@@ -29,24 +35,24 @@ const products = productCollection.sort((a , b) => a.data.id - b.data.id);
                 </div>
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {
-                        products.map((product: any) => (
-                        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-                            <div class="relative overflow-hidden rounded-xl">
-                                <img  src={product.data.image}
-                                alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
-                            </div>
-                            <div class="mt-6 relative">
-                                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-                                    {product.data.title}
-                                </h3>
-                                <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-                                    {product.data.summary}
-                                </p>
-                                <a class="inline-block" href={product.id}>
-                                    <span class="text-info dark:text-blue-300">Saiba mais</span>
-                                </a>
-                            </div>
-                        </div>                         
+                        products.map((product: Product) => (
+                            <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+                                <div class="relative overflow-hidden rounded-xl">
+                                    <img  src={product.data.image}
+                                    alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+                                </div>
+                                <div class="mt-6 relative">
+                                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+                                        {product.data.title}
+                                    </h3>
+                                    <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+                                        {product.data.summary}
+                                    </p>
+                                    <a class="inline-block" href=`produtos/${product.id}`>
+                                        <span class="text-info dark:text-blue-300">Saiba mais</span>
+                                    </a>
+                                </div>
+                            </div>                         
                         ))
                     }
                 </div>
