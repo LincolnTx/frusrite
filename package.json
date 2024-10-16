@@ -16,6 +16,14 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^5.1.0"
+    "@astrojs/tailwind": "^5.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.8"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   }
 }
