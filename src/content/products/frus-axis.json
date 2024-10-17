@@ -3,14 +3,38 @@
     "title": "Frus Axis",
     "image": "/images/frusaxis_01.jpg",
     "summary": "O Frus Axis é um pedal baseado no pre-amp existente no Moogerfoogers MF-101 e no MF-102 que acreditamos ser essencial para o timbre de John nas turnês Stadium Arcadium...",
-    "main-image": "",
+    "mainImage": "",
     "gallery": ["", ""],
     "reviews": ["", ""],
     "extra": {
         "title": "",
         "content": ""
     },
-    "description": "nosso primeiro pedal feito em 2020"
+    "description": ["nosso primeiro pedal feito em 2020"],
+    "paymentsMethods": [
+        {
+            "name": "Pix",
+            "price": "729,00"
+        },
+        {
+            "name": "Mercado Pago",
+            "price": "760,00",
+            "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
+        }
+    ],
+    "tecInfo": {
+        "font": "Fonte de 9V centro negativo com conector P4",
+        "consumption": "9mA (9V DC)",
+        "knobs": "Depth e Volume",
+        "indicators": "Led vermelho 5mm para indicar o efeito ligado ou desligado",
+        "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
+        "length": "13cm",
+        "width": "7,2cm",
+        "maxHeight": "5cm, (com altura do footswitch): 5cm",
+        "minHeight": "3cm, (apenas gabinete)",
+        "weight": "170g",
+        "image": "/images/frusrite_sample_02.jpg"
+    }
 }
 
     

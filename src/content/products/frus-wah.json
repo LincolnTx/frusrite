@@ -3,14 +3,38 @@
     "title": "Frus Wah",
     "image": "/images/fruswah_01.jpg",
     "summary": "O Frus Wah é um projeto que visa aprimorar e compilar em um único circuito as melhores características do Ibanez WH-10 V1 cinza e do V1 preto.",
-    "main-image": "image.jpg",
+    "mainImage": "image.jpg",
     "gallery": ["1", "2"],
     "reviews": ["1", "2"],
     "extra": {
         "title": "teste",
         "content": "teste"
     },
-    "description": "O Frusrite é inspirado no Fuzzrite com transistores de germânio da Mosrite, que teve 250 unidades fabricadas entre 1965 e 1966. O nosso projeto é extremamente fiel a primeira versão do fuzz, desenvolvido por Ed Sanner. Contudo, adiciona melhorias ao circuito que trazem comodidade ao uso e nada influenciam no timbre original.O Frusrite conta com dois transistores de germânio japoneses da década de 1960, podendo ser alimentado com fontes 9V de centro negativo (padrão P4). O chaveamento do pedal é true bypass com indicação de acionamento com um LED vermelho, junto a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões (o original possuía capacitores cerâmicos que são imprecisos e colaboram para ruídos e sons estáticos), excelentes jacks, e acima de tudo: uma montagem feita 100% à mão. Além disso, o pedal preserva o visual vintage do Fuzzrite em uma carcaça menor que a original.Esse projeto foi realizado tendo como referência um desses Fuzzrite V1, que acabou aos pés de John Frusciante e foi usado com o Red Hot Chili Peppers na turnê de Stadium Arcadium entre 2006 e 2007 e em seu álbum solo The Empyrean de 2009."
+    "description": ["O Frusrite é inspirado no Fuzzrite com transistores de germânio da Mosrite, que teve 250 unidades fabricadas entre 1965 e 1966. O nosso projeto é extremamente fiel a primeira versão do fuzz, desenvolvido por Ed Sanner. Contudo, adiciona melhorias ao circuito que trazem comodidade ao uso e nada influenciam no timbre original.O Frusrite conta com dois transistores de germânio japoneses da década de 1960, podendo ser alimentado com fontes 9V de centro negativo (padrão P4). O chaveamento do pedal é true bypass com indicação de acionamento com um LED vermelho, junto a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões (o original possuía capacitores cerâmicos que são imprecisos e colaboram para ruídos e sons estáticos), excelentes jacks, e acima de tudo: uma montagem feita 100% à mão. Além disso, o pedal preserva o visual vintage do Fuzzrite em uma carcaça menor que a original.Esse projeto foi realizado tendo como referência um desses Fuzzrite V1, que acabou aos pés de John Frusciante e foi usado com o Red Hot Chili Peppers na turnê de Stadium Arcadium entre 2006 e 2007 e em seu álbum solo The Empyrean de 2009."],
+    "paymentsMethods": [
+        {
+            "name": "Pix",
+            "price": "729,00"
+        },
+        {
+            "name": "Mercado Pago",
+            "price": "760,00",
+            "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
+        }
+    ],
+    "tecInfo": {
+        "font": "Fonte de 9V centro negativo com conector P4",
+        "consumption": "9mA (9V DC)",
+        "knobs": "Depth e Volume",
+        "indicators": "Led vermelho 5mm para indicar o efeito ligado ou desligado",
+        "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
+        "length": "13cm",
+        "width": "7,2cm",
+        "maxHeight": "5cm, (com altura do footswitch): 5cm",
+        "minHeight": "3cm, (apenas gabinete)",
+        "weight": "170g",
+        "image": "/images/frusrite_sample_02.jpg"
+    }
 }
 
     
