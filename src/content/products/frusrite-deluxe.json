@@ -1,0 +1,40 @@
+{
+    "id": 6,
+    "title": "Frusrite Deluxe",
+    "image": "/images/frusrite_deluxe_01.jpg",
+    "summary": "O Frusrite Deluxe é uma versão comemorativa e limitada do Frusrite, um projeto inspirado no Fuzzrite da Mosrite que utilizava transistores de germânio e teve cerca de 250 unidades fabricadas entre 1965 e 1966",
+    "mainImage": "image.jpg",
+    "gallery": ["", ""],
+    "reviews": ["", ""],
+    "extra": {
+        "title": "",
+        "content": ""
+    },
+    "description": ["nosso primeiro pedal feito em 2020"],
+    "paymentsMethods": [
+        {
+            "name": "Pix",
+            "price": "729,00"
+        },
+        {
+            "name": "Mercado Pago",
+            "price": "760,00",
+            "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
+        }
+    ],
+    "tecInfo": {
+        "font": "Fonte de 9V centro negativo com conector P4",
+        "consumption": "9mA (9V DC)",
+        "knobs": "Depth e Volume",
+        "indicators": "Led vermelho 5mm para indicar o efeito ligado ou desligado",
+        "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
+        "length": "13cm",
+        "width": "7,2cm",
+        "maxHeight": "5cm, (com altura do footswitch): 5cm",
+        "minHeight": "3cm, (apenas gabinete)",
+        "weight": "170g",
+        "image": "/images/frusrite_sample_02.jpg"
+    }
+}
+
+    
