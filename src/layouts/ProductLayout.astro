@@ -1,18 +1,18 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
 import MainContainer from "../components/MainContainer.astro";
-import Container from "../components/Container.astro";
 
 interface Props {
   product: CollectionEntry<"products">;
 }
 const { product } = Astro.props;
 
-const { tecInfo } = product.data;
+const { tecInfo, reviews } = product.data;
 ---
 
 <script>
+  // script das abas
   document.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".tab");
     const contents = document.querySelectorAll(".tab-content");
@@ -35,6 +35,54 @@ const { tecInfo } = product.data;
         contents.forEach((content) => content.classList.add("hidden"));
         contents[index].classList.remove("hidden");
       });
+    });
+  });
+
+  // galeria teste
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentIndex = 0;
+    const carousel = document.getElementById("video-carousel") as HTMLElement;
+    const availableVideos = JSON.parse(
+      carousel?.getAttribute("data-available-videos") as string
+    ) as HTMLAnchorElement[];
+
+    const videosLength = availableVideos.length;
+
+    // Função para atualizar o carrossel com animação suave
+    function updateCarousel() {
+      carousel.style.transition = "transform 0.5s ease-out";
+      const percentage = -currentIndex * 80; // Controla a translação
+      carousel.style.transform = `translateX(${percentage}%)`;
+    }
+
+    // Função para redefinir a transição ao chegar nos vídeos duplicados
+    function handleLoop() {
+      if (currentIndex === -1) {
+        currentIndex = videosLength; // Vai para o último vídeo real
+        carousel.style.transition = "transform 0.5s ease-out"; // Remove a transição para um salto imediato
+        carousel.style.transform = `translateX(-${currentIndex * 80}%)`;
+      }
+      if (currentIndex === videosLength + 1) {
+        currentIndex = 1; // Vai para o primeiro vídeo real
+        carousel.style.transition = "transform 0.5s ease-out"; // Remove a transição para um salto imediato
+        carousel.style.transform = `translateX(-${currentIndex * 80}%)`;
+      }
+    }
+
+    // Evento para botão "anterior"
+    document.getElementById("prev-btn")?.addEventListener("click", () => {
+      currentIndex =
+        currentIndex === 0 ? availableVideos.length - 1 : currentIndex - 1;
+      updateCarousel();
+      setTimeout(handleLoop, 500); // Verifica o loop após a transição
+    });
+
+    // Evento para botão "próximo"
+    document.getElementById("next-btn")?.addEventListener("click", () => {
+      currentIndex =
+        currentIndex === availableVideos.length - 1 ? 0 : currentIndex + 1;
+      updateCarousel();
+      setTimeout(handleLoop, 500); // Verifica o loop após a transição
     });
   });
 </script>
@@ -199,9 +247,76 @@ const { tecInfo } = product.data;
           </div>
         </div>
 
-        <div class="mt-16 p-6 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]">
+        <div
+          class="mt-16 h-[50%] p-6 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]"
+        >
           <h3 class="text-xl font-bold text-gray-800">Reviews</h3>
           <!-- galeria de video -->
+          <div class="mt-4 space-y-6 text-gray-800">
+            <!-- inicio galeria com carrossel -->
+            <div
+              class="gallery-container relative mx-auto w-full max-w-4xl overflow-hidden"
+            >
+              <!-- Contêiner do carrossel com 3 vídeos -->
+              <div
+                id="video-carousel"
+                class="flex items-center transition-transform duration-500 ease-out"
+                style="transform: translateX(0%);"
+                data-available-videos={JSON.stringify(reviews)}
+              >
+                {
+                  reviews.map((video, index) => (
+                    <div class="video-wrapper h-500 relative mx-2 w-[80%] flex-shrink-0">
+                      <iframe
+                        id="gallery-video"
+                        class="h-96 w-full rounded-lg object-contain shadow-lg"
+                        src={video}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      />
+                    </div>
+                  ))
+                }
+              </div>
+              <!-- Botões de navegação -->
+              <button
+                id="prev-btn"
+                class="absolute left-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-700 bg-transparent bg-opacity-50 px-4 py-2 text-primary transition hover:scale-110 hover:bg-opacity-75"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+              <button
+                id="next-btn"
+                class="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-700 bg-transparent bg-opacity-50 px-4 py-2 text-primary transition hover:scale-110 hover:bg-opacity-75"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
     "summary": "O Frusrite é inspirado no Fuzzrite com transistores de germânio da Mosrite, que teve 250 unidades fabricadas entre 1965 e 1966.",
     "mainImage": "/images/frusrite_sample.png",
     "gallery": ["/images/frusrite_01.jpg", "/images/frusrite_02.jpg", "/images/frusrite_03.jpg"],
-    "reviews": ["1", "2"],
+    "reviews": ["https://www.youtube.com/embed/zADFQUGEL3g","https://www.youtube.com/embed/UW276il5pXs", "https://www.youtube.com/embed/OSrlCrc00q4", "https://www.youtube.com/embed/QJxZLozRbaI", "https://www.youtube.com/embed/RlcfHzCmUWI", "https://www.youtube.com/embed/jIGOSFWoGGI", "https://www.youtube.com/embed/Q0lsEbPJ3JY", "https://www.youtube.com/embed/3SXmlOzICwY", "https://www.youtube.com/embed/_d-9ylIoVxI"],
     "extra": {
         "title": "A configuração preferida de John Frusciante",
         "content": "A configuração preferida de John Frusciante era com o DEPTH no 0 e VOLUME variando entre 8 e 10. Dessa maneira o timbre fica muito controlável, dinâmico e definido. O DEPTH adiciona agudos ao efeito, fazendo-o perder definição, portanto quando usado no zero ele fica com as frequências equilibradas, furando a mix de uma banda perfeitamente. Quanto ao VOLUME, é preciso levar em conta que os amplificadores do Frusciante eram muito altos ao ponto de quase ter uma saturação real, tornando qualquer controle de VOLUME de seus drives um controle de ganho também."
