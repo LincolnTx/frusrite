@@ -3,37 +3,37 @@
     "title": "Frus Axis",
     "image": "/images/frusaxis_01.jpg",
     "summary": "O Frus Axis é um pedal baseado no pre-amp existente no Moogerfoogers MF-101 e no MF-102 que acreditamos ser essencial para o timbre de John nas turnês Stadium Arcadium...",
-    "mainImage": "",
-    "gallery": ["", ""],
-    "reviews": ["", ""],
+    "mainImage": "/images/frusaxis_sample.png",
+    "gallery": ["/images/frusaxis_01.jpg", "/images/frusaxis_02.jpg", "/images/frusaxis_03.jpg", "/images/frusaxis_04.jpg"],
+    "reviews": ["https://www.youtube.com/embed/zymkcR0982A", "https://www.youtube.com/embed/BIqsjWdCNR0", "https://www.youtube.com/embed/LTNKg7kqGso"],
     "extra": {
-        "title": "",
-        "content": ""
+        "title": "O controle de ganho interno",
+        "content": "Internamente, o pedal possui um trimpot para controle do ganho do pedal, tornando-o mais ou menos saturado. A posição de fábrica é a mais branda possível, com o trimpot totalmente para a esquerda ● - essa configuração funciona bem com todos os tipos de captadores, sem distorcer muito o som e tornando o curso do controle de DRIVE muito aproveitável. Caso você utilize exclusivamente captadores de baixa saída e/ou procure um som um mais quente, poderá adequar essa configuração a gosto ao girar o trimpot para a direita ■."
     },
-    "description": ["nosso primeiro pedal feito em 2020"],
+    "description": ["O Frus Axis é um pedal baseado no pre-amp existente no Moogerfoogers MF-101 (Low Pass Filter) e no MF-102 (Ring Modulator) que acreditamos ser essencial para o timbre de John Frusciante na turnê de Stadium Arcadium e na turnê de Unlimited Love / ROTDC. Para tanto, realizamos diversos testes com cadeias de pedais similares às de John, conferindo a diferença na prática.", "O controle de DRIVE desses pedais (MF-101 e MF-102) é ativo e funciona mesmo que o efeito do pedal esteja desligado - diferente dos demais Moogerfoogers e de maneira semelhante ao Boss CE-1 -, trazendo volume e um pouco de distorção, crunch e brilho para cadeia de sinal em que eles estão inseridos. Entre os mais de 20 pedais da turnê de Stadium Arcadium, Frusciante possuía três MF-101 e um MF-102 em lugares diferentes da cadeia de sinal, reduzindo as perdas causadas pela longa sequência de pedais e cabos. Já na turnê de Unlimited Love / ROTDC, Frusciante utiliza um MF-101 que contribui com seu clean forte e brilhante.", "São inúmeras as possibilidades de uso, podendo estar tanto no início, quanto no meio, ou final da cadeia; Ligado 100% do tempo para modelar o sinal, ou utilizando-o como booster em momentos específicos, já que esse circuito pode gerar um aumento de volume de até 12dB.", "Além disso, o pedal possui um indicador Peak Level (LED vermelho) que pisca conforme a dinâmica do sinal de recebido, sendo sensível ao equipamento que está sendo utilizado, e à posição do controle de DRIVE: Ao utilizá-lo como primeiro pedal da cadeia, ele reagirá de acordo com o captador utilizado e à força com que a guitarra está sendo tocada. Já no meio/final da cadeia, seu brilho e dinâmica será influenciado também pelos pedais ligados anteriormente."],
     "paymentsMethods": [
         {
             "name": "Pix",
-            "price": "729,00"
+            "price": "619,00"
         },
         {
             "name": "Mercado Pago",
-            "price": "760,00",
+            "price": "659,00",
             "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
         }
     ],
     "tecInfo": {
         "font": "Fonte de 9V centro negativo com conector P4",
-        "consumption": "9mA (9V DC)",
-        "knobs": "Depth e Volume",
-        "indicators": "Led vermelho 5mm para indicar o efeito ligado ou desligado",
-        "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
-        "length": "13cm",
-        "width": "7,2cm",
-        "maxHeight": "5cm, (com altura do footswitch): 5cm",
-        "minHeight": "3cm, (apenas gabinete)",
+        "consumption": "60mA (9V DC)",
+        "knobs": "Drive",
+        "indicators": "Led verde 5mm para indicar o efeito ligado ou desligado / Led vermelho 5mm para indicar intensidade do sinal recevido",
+        "conections": "Inst. (Input), Amp. (Output), conector P4 para fonte",
+        "length": "11cm",
+        "width": "7,5cm",
+        "maxHeight": "5,1cm, (com altura do footswitch)",
+        "minHeight": "3,5cm, (apenas gabinete)",
         "weight": "170g",
-        "image": "/images/frusrite_sample_02.jpg"
+        "image": "/images/frusaxis_sample_02.jpg"
     }
 }
 

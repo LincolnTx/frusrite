@@ -3,37 +3,38 @@
     "title": "Frus Muff",
     "image": "/images/frusmuff_01.jpg",
     "summary": "O Frus Muff reúne dois clássicos utilizados por John Frusciante em um único pedal, com uma chave seletora para alterar entre modo NYC e Russo",
-    "mainImage": "",
-    "gallery": ["", ""],
-    "reviews": ["", ""],
+    "mainImage": "/images/frusmuff_sample.png",
+    "gallery": ["/images/frusmuff_01.jpg", "/images/frusmuff_02.jpg", "/images/frusmuff_03.jpg"],
+    "reviews": ["https://www.youtube.com/embed/7zpnsd8VpcE", "https://www.youtube.com/embed/P3AFqRlB-Ko", "https://www.youtube.com/embed/vc84ziQwkFc", "https://www.youtube.com/embed/3LzBgPN_uGk"],
     "extra": {
-        "title": "",
-        "content": ""
+        "title": "Os timbre dos muffs de John Frusciante",
+        "content": "O Big Muff é um dos pedais que mais possuem influência e dependem dos amplificadores para ser regulado, com isso, iremos citar alguns exemplos de timbres obtidos por John Frusciante para que você encontre esse mesmo som que está guardado nessa caixinha. O primeiro Big Muff visto entre os equipamentos de John Frusciante foi o Big Muff Black Russian V8 com seis parafusos na caixa (que o caracteriza como da primeira leva dessa versão), ele começou a ser usado na metade da turnê de Californication do Red Hot Chili Peppers - como substituto do Boss FZ-3) e foi responsável pelos sons mais distorcidos de 2000 a 2001. Já a primeira reedição do Big Muff PI foi usada por Frusciante na gravação do By The Way (\"em muitas partes do álbum\", como ele afirmou) e na gravação de Stadium Arcadium (como nos solos de \"Strip My Mind\" e \"Wet Sand\") - esse pedal foi parte ativa de ambas as turnês dos álbuns e, junto ao DS-2, teve seu som marcado no Slane Castle em 2003"
     },
-    "description": ["nosso primeiro pedal feito em 2020"],
+    "description": ["O Frus Muff reúne dois clássicos utilizados por John Frusciante em um único pedal. Criado a partir da primeira reedição americana do Big Muff PI (conhecido como V9 - EC3003), desenvolvido por Fran Blanche e fabricado no inicio de 2000, o nosso pedal no modo NYC garante o timbre de Muff utilizado por John Frusciante a partir de 2002. Já com a chave no modo russo, parte do circuito do pedal é alterado, assim proporcionando o timbre da primeira leva do Big Muff Black Russian V8 (fabricada entre 1999 e 2000) e que foi usado por Frusciante entre 2000 e 2001.", "Para o melhor resultado sonoro e fidedignidade ao projeto base, mantemos os três controles tradicionais de regulagem do Muff que são responsivos à chave que alterna entre as duas versões desse clássico – tudo feito de forma analógica, simples e rápida. Além disso, o nosso pedal é True Bypass.", "O Frus Muff é construído com a utilização de transistores de silício 2N5088 idênticos ao usado na primeira reedição do Big Muff PI do inicio 2000, resistores de 1% de tolerância, capacitores de poliéster e multicamadas para diminuir ruídos e imprecisões, excelentes jacks, e acima de tudo: uma montagem feita 100% à mão de forma minuciosa e limpa, realizada com muito carinho e zelo."],
     "paymentsMethods": [
         {
             "name": "Pix",
-            "price": "729,00"
+            "price": "759,00"
         },
         {
             "name": "Mercado Pago",
-            "price": "760,00",
+            "price": "799,00",
             "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
         }
     ],
     "tecInfo": {
         "font": "Fonte de 9V centro negativo com conector P4",
-        "consumption": "9mA (9V DC)",
-        "knobs": "Depth e Volume",
+        "consumption": "12mA (9V DC)",
+        "knobs": "Sustain, Tone e Volume",
+        "switches": "NYC / BLACK RUSSIAN",
         "indicators": "Led vermelho 5mm para indicar o efeito ligado ou desligado",
-        "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
-        "length": "13cm",
+        "conections": "Inst. (Input), Amp. (Output), conector P4 para fonte",
+        "length": "11cm",
         "width": "7,2cm",
-        "maxHeight": "5cm, (com altura do footswitch): 5cm",
-        "minHeight": "3cm, (apenas gabinete)",
-        "weight": "170g",
-        "image": "/images/frusrite_sample_02.jpg"
+        "maxHeight": "5cm, (com altura do footswitch): ",
+        "minHeight": "3,3cm, (apenas gabinete)",
+        "weight": "180g",
+        "image": "/images/frusmuff_sample_02.jpg"
     }
 }
 

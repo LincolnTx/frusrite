@@ -3,22 +3,22 @@
     "title": "Frus Wah",
     "image": "/images/fruswah_01.jpg",
     "summary": "O Frus Wah é um projeto que visa aprimorar e compilar em um único circuito as melhores características do Ibanez WH-10 V1 cinza e do V1 preto.",
-    "mainImage": "image.jpg",
-    "gallery": ["1", "2"],
-    "reviews": ["1", "2"],
+    "mainImage": "/images/fruswah_sample.png",
+    "gallery": ["/images/fruswah_01.jpg", "/images/fruswah_02.jpg","/images/fruswah_03.jpg", "/images/fruswah_04.jpg"],
+    "reviews": ["https://www.youtube.com/embed/PuJpX9mP6vE", "https://www.youtube.com/embed/VU9jG7hrlQc"],
     "extra": {
-        "title": "teste",
-        "content": "teste"
+        "title": "O timbre de WAH de John Frusciante",
+        "content": "John Frusciante tem a versão cinza do Ibanez WH-10 como o seu principal e favorito wah, utilizando-o na maior parte do tempo que esteve no Red Hot Chili Peppers (salve a exceção citada abaixo). Para obter o timbre desse pedal com o Frus Wah, recomendamos que você use a chave na posição de guitarra, regule o depth em torno de 2~3 h e posicione o knob de volume próximo ao máximo. A exceção de uso é a versão preta desse pedal, que Frusciante usou na gravação e na turnê do álbum Californication (e em algumas datas pontuais da turnê de By The Way), já para você chegar a esse timbre com nosso pedal, indicamos que você use a chave de guitarra, regule o depth em torno de 1~2 h e posicione o knob de volume em 2 h - obtendo assim um som mais controlado e com menos boost. Vale citar que a posição da chave para o baixo pode ser usada - como nas gravações originais - em músicas como “Naked In The Rain” e como “Get On Top”, onde Frusciante usou esse modo para deixar o som de sua guitarra mais grave durante o uso do wah."
     },
-    "description": ["O Frusrite é inspirado no Fuzzrite com transistores de germânio da Mosrite, que teve 250 unidades fabricadas entre 1965 e 1966. O nosso projeto é extremamente fiel a primeira versão do fuzz, desenvolvido por Ed Sanner. Contudo, adiciona melhorias ao circuito que trazem comodidade ao uso e nada influenciam no timbre original.O Frusrite conta com dois transistores de germânio japoneses da década de 1960, podendo ser alimentado com fontes 9V de centro negativo (padrão P4). O chaveamento do pedal é true bypass com indicação de acionamento com um LED vermelho, junto a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões (o original possuía capacitores cerâmicos que são imprecisos e colaboram para ruídos e sons estáticos), excelentes jacks, e acima de tudo: uma montagem feita 100% à mão. Além disso, o pedal preserva o visual vintage do Fuzzrite em uma carcaça menor que a original.Esse projeto foi realizado tendo como referência um desses Fuzzrite V1, que acabou aos pés de John Frusciante e foi usado com o Red Hot Chili Peppers na turnê de Stadium Arcadium entre 2006 e 2007 e em seu álbum solo The Empyrean de 2009."],
+    "description": ["O Frus Wah é um projeto que visa aprimorar e compilar em um único circuito as melhores características do Ibanez WH-10 V1 cinza (1987 a 1993) e do V1 preto (1993 a 1996). Resultado de meses de trabalho, o circuito é baseado principalmente na primeira versão cinza do wah-wah original de John Frusciante, respeitando sua consagrada sonoridade e acrescentando duas melhorias fundamentais: um controle de volume (que permite a dosagem do boost do efeito pelo knob) e o True Bypass (tornando o circuito sem perdas de timbre), corrigindo assim dois problemas notados pelos usuários da versão cinza e que foram em partes compensados na versão preta deste clássico.", "No circuito do Frus Wah, utilizamos os mesmos modelos e valores de componentes encontrados nas versões originais. O nosso pedal possui o controle de depth (que controla a profundidade de efeito), a chave que possibilita escolher o efeito para a guitarra (sons mais agudos) ou para o baixo (sons mais graves) e o controle de volume que permite ao usuário sons semelhantes ao wah cinza (com o boost extremo) e ao wah preto (com o boost sútil). Além disso, desenvolvemos com tecnologia própria um potenciômetro duplo de 500K/50K, como o utilizado na versão cinza. Essa tecnologia é um híbrido mecânico/óptico, tornando o pedal mais durável e de manutenção muito mais simples e acessível. Já no visual e na experiência, utilizamos em nosso pedal uma carcaça análoga à um tanque de guerra, extremamente resistente e tradicional entre os pedais clássicos desse efeito. Optamos também por mantê-la na cor natural para combinar com os nossos demais projetos.", "O pedal é construído com a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões, excelentes jacks, e acima de tudo: uma montagem feita 100% à mão de forma minuciosa e limpa, e realizada com muito carinho e zelo, trazendo enorme facilidade para eventuais manutenções."],
     "paymentsMethods": [
         {
             "name": "Pix",
-            "price": "729,00"
+            "price": " 1.399,00"
         },
         {
             "name": "Mercado Pago",
-            "price": "760,00",
+            "price": "1.499,00",
             "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
         }
     ],
@@ -33,7 +33,7 @@
         "maxHeight": "5cm, (com altura do footswitch): 5cm",
         "minHeight": "3cm, (apenas gabinete)",
         "weight": "170g",
-        "image": "/images/frusrite_sample_02.jpg"
+        "image": "/images/fruswah_sample_02.jpg"
     }
 }
 

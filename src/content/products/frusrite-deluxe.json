@@ -3,14 +3,16 @@
     "title": "Frusrite Deluxe",
     "image": "/images/frusrite_deluxe_01.jpg",
     "summary": "O Frusrite Deluxe é uma versão comemorativa e limitada do Frusrite, um projeto inspirado no Fuzzrite da Mosrite que utilizava transistores de germânio e teve cerca de 250 unidades fabricadas entre 1965 e 1966",
-    "mainImage": "image.jpg",
-    "gallery": ["", ""],
-    "reviews": ["", ""],
+    "mainImage": "/images/frusrite_deluxe_sample.png",
+    "gallery": ["/images/frusrite_deluxe_01.jpg", "/images/frusrite_deluxe_02.jpg", "/images/frusrite_deluxe_03.jpg", "/images/frusrite_deluxe_04.jpg"],
+    "reviews": ["https://www.youtube.com/embed/0feDeHAdHqo"],
     "extra": {
-        "title": "",
-        "content": ""
+        "title": "A configuração preferida de John Frusciante",
+        "content": "A configuração preferida de John Frusciante era com o DEPTH no 0 e VOLUME variando entre 8 e 10. Dessa maneira, o timbre fica muito controlável, dinâmico e definido. O DEPTH adiciona agudos ao efeito, fazendo-o perder definição, portanto quando usado no zero ele fica com as frequências equilibradas, furando a mix de uma banda perfeitamente. Quanto ao VOLUME, é preciso levar em conta que os amplificadores do Frusciante eram muito altos, tornando qualquer controle de VOLUME de seus drives um controle de ganho também."
     },
-    "description": ["nosso primeiro pedal feito em 2020"],
+    "description": ["O Frusrite Deluxe é uma versão comemorativa e limitada do Frusrite, um projeto inspirado no Fuzzrite da Mosrite que utilizava transistores de germânio e teve cerca de 250 unidades fabricadas entre 1965 e 1966. O circuito do Frusrite é fiel a primeira versão do fuzz desenvolvido por Ed Sanner e seu gabinete na versão Deluxe possui também as mesmas dimensões físicas do projeto dos anos 60, além de uma combinação especial de transistores. Além disso, foram adicionadas melhorias ao circuito que trazem comodidade ao uso nos dias atuais, não influenciando no timbre.", "O seu Frusrite Deluxe conta com uma conversão de polaridade interna para dar conta dos transistores de germânio - Hitachi 2SA12 e Matsushita 2SA102 - (aferidos um a um), podendo então ser alimentado com fontes 9V de centro negativo (padrão P4) e também com baterias 9V.", "ATENÇÃO: Não é necessário retirar a bateria do pedal quando desejar utilizá-lo com fontes. Porém, é recomendado retirar o plug do input (INST.) quando não estiver utilizando-o. Dessa forma, a bateria não gastará sua carga e poderá durar por extensos períodos. ", "O chaveamento do pedal é True Bypass com indicação de acionamento por um LED vermelho, junto a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões (o original possuía capacitores cerâmicos que são imprecisos e colaboram para ruídos e sons estáticos), excelentes jacks e potenciômetros, e acima de tudo: uma montagem feita 100% à mão de forma minuciosa e limpa, e realizada com muito carinho e zelo, preservando o espírito e visual vintage que nós, admiradores de pedais, tanto gostamos e buscamos. ", "Esse projeto foi realizado tendo como referência um desses Fuzzrite V1, que acabou nos pés de John Frusciante e foi utilizado com o Red Hot Chili Peppers na turnê de Stadium Arcadium entre 2006 e 2007 e em seu álbum solo The Empyrean de 2009."],
+    "freezed": true, 
+    "note": "O Frusrite Deluxe é uma edição limitada que teve a fabricação de apenas dezesseis unidades (#000 a #015) - sendo que 10 delas (#006 a #015) foram destinadas a venda em outubro de 2022.",
     "paymentsMethods": [
         {
             "name": "Pix",
@@ -23,17 +25,17 @@
         }
     ],
     "tecInfo": {
-        "font": "Fonte de 9V centro negativo com conector P4",
+        "font": "Fonte de 9V centro negativo com conector P4 ou suporte interno para bateria 9V",
         "consumption": "9mA (9V DC)",
         "knobs": "Depth e Volume",
         "indicators": "Led vermelho 5mm para indicar o efeito ligado ou desligado",
-        "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
-        "length": "13cm",
-        "width": "7,2cm",
-        "maxHeight": "5cm, (com altura do footswitch): 5cm",
-        "minHeight": "3cm, (apenas gabinete)",
-        "weight": "170g",
-        "image": "/images/frusrite_sample_02.jpg"
+        "conections": "Inst. (Input), Amp. (Output), conector P4 para fonte e suporte interno para bateria 9V",
+        "length": "17cm, (com knobs)",
+        "width": "10cm",
+        "maxHeight": "4,6cm, (com altura do footswitch): 5cm",
+        "minHeight": "3,3cm, (apenas gabinete)",
+        "weight": "380g",
+        "image": "/images/frusrite_deluxe_sample_02.jpg"
     }
 }
 

@@ -3,22 +3,22 @@
     "title": "Frusrite Si",
     "image": "/images/frusrite_si_01.jpg",
     "summary": "O Frusrite Si é a nossa versão do Fuzzrite utilizando transistores de silício, seguindo em um universo paralelo a nossa principal versão com transistores de germânio",
-    "mainImage": "",
-    "gallery": ["", ""],
-    "reviews": ["", ""],
+    "mainImage": "/images/frusrite_si_sample.png",
+    "gallery": ["/images/frusrite_si_01.jpg", "/images/frusrite_si_02.jpg", "/images/frusrite_si_03.jpg"],
+    "reviews": ["https://www.youtube.com/embed/PDX-oSsNpuY"],
     "extra": {
-        "title": "",
-        "content": ""
+        "title": "Como configurar o frusrite (Si)",
+        "content": "VOLUME: controla o volume de saída do circuito, podendo gerar sons suaves em configurações mais brandas ou gerar sons distorcidos em configurações mais extremas. DEPTH: é a interação entre os dois transistores de silício - com o controle no mínimo, você ouve o transistor do primeiro estagio (com um timbre mais limpo e mais grave), conforme você começa a subir esse controle, você ouve a mistura entre os dois transistores, até no máximo quando prevalece o transistor do segundo estagio (com um timbre mais agressivo e mais agudo)."
     },
-    "description": ["nosso primeiro pedal feito em 2020"],
+    "description": ["O Frusrite Si é a nossa versão do Fuzzrite utilizando transistores de silício, seguindo em um universo paralelo a nossa principal versão com transistores de germânio. Essa versão possui frequências agudas mais nítidas e graves mais domados. Esse é um projeto destinado aos amantes desse circuito consagrado e que buscam ter todos os sons das versões desse pedal, bem como para os músicos que procuram os timbres mais velcro de \"In-A-Gadda-Da-Vida\" do Iron Butterfly, ou de \"I Wanna Be Your Dog\" do The Stooges e dos temas de spaghetti western de Ennio Morricone.", "Os transistores de silício passaram a ser utilizados nesse circuito ainda no final da década de 1960, quando mostraram-se uma opção mais viável por não apresentarem variações sonoras induzidas pela temperatura externa, característica pela qual os transistores de germânio são bem conhecidos. A história conta que foram fabricadas apenas 250 unidades com transistores de germânio, após isso, o circuito foi refeito com transistores de silício e essa tornou-se a versão definitiva desse clássico.", "O Frusrite (Si) conta com um transistor Motorola BSX60 e um transistor BF258, podendo ser alimentado com fontes 9V de centro negativo (padrão P4). O chaveamento do pedal é true bypass com indicação de acionamento com um LED azul (a única diferença visual para a nossa principal versão que possui o LED vermelho), junto a utilização de resistores de 1% de tolerância, capacitores de poliéster para diminuir ruídos e imprecisões (o original possuía capacitores cerâmicos que são imprecisos e colaboram para ruídos e sons estáticos), excelentes jacks, e acima de tudo: uma montagem feita 100% à mão.", "ALERTA: O Frusrite (Si) é ideal para quem busca todas as gamas sonoras desse clássico - ao lado da nossa principal versão - e que não resiste a um ótimo pedal de fuzz. O timbre mais rasgado e mais áspero é uma bela adição para qualquer coleção. Contudo, caso você conheça a nossa marca pelo intuito de reproduzir os sons de John Frusciante e busque isso, indicamos que você escolha a nossa versão em germânio desse circuito. "],
     "paymentsMethods": [
         {
             "name": "Pix",
-            "price": "729,00"
+            "price": "679,00"
         },
         {
             "name": "Mercado Pago",
-            "price": "760,00",
+            "price": "719,00",
             "disclaimer": "parcelamento em 12 vezes com os juros da plataforma"
         }
     ],
@@ -33,7 +33,7 @@
         "maxHeight": "5cm, (com altura do footswitch): 5cm",
         "minHeight": "3cm, (apenas gabinete)",
         "weight": "170g",
-        "image": "/images/frusrite_sample_02.jpg"
+        "image": "/images/frusrite_si_sample.png"
     }
 }
 

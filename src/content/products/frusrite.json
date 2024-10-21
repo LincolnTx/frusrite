@@ -30,7 +30,7 @@
         "conections": "Inst. (Input), Amp. (Output) e conector P4 para fonte",
         "length": "13cm",
         "width": "7,2cm",
-        "maxHeight": "5cm, (com altura do footswitch): 5cm",
+        "maxHeight": "5cm, (com altura do footswitch)",
         "minHeight": "3cm, (apenas gabinete)",
         "weight": "170g",
         "image": "/images/frusrite_sample_02.jpg"
