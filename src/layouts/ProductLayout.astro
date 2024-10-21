@@ -9,6 +9,10 @@ interface Props {
 const { product } = Astro.props;
 
 const { tecInfo, reviews } = product.data;
+
+function handleReviewsBehaviour() {
+  return reviews.length <= 1;
+}
 ---
 
 <script>
@@ -113,7 +117,7 @@ const { tecInfo, reviews } = product.data;
               <!-- TODO: criar logica para trocar imagens ao clicar e indicador de qual imagem esta selecionada -->
               <!-- loop para cada image -->
               {
-                product.data.gallery.map((image) => (
+                product.data.gallery.map((image: string) => (
                   <div class="flex h-20 w-24 cursor-pointer items-center justify-center rounded-lg p-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]">
                     <img src={image} alt="Product2" class="w-full" />
                   </div>
@@ -130,7 +134,7 @@ const { tecInfo, reviews } = product.data;
             <div class="mt-4 flex flex-wrap gap-4">
               <!-- aqui vai vir a descrição principal -->
               {
-                product.data.description.map((line) => (
+                product.data.description.map((line: string) => (
                   <p class="my-2 text-gray-600 dark:text-gray-300">{line}</p>
                 ))
               }
@@ -165,31 +169,40 @@ const { tecInfo, reviews } = product.data;
               </p>
             </div>
             <div class="tab-content hidden rounded-lg p-4" data-content="1">
-              <p class="my-4 text-gray-600 dark:text-gray-300">
-                O {product.data.title} está disponível para compra pela lista de
-                espera. Abrimos lotes para pré-venda de tempos em tempos e avisamos
-                aos primeiros colocados da lista de espera, com isso, fazemos a venda
-                e estipulamos um prazo de envio. Para participar da lista de espera,
-                por favor, mande uma mensagem no WhatsApp:
-                <a
-                  href="https://api.whatsapp.com/send/?phone=5541991912258&text&type=phone_number&app_absent=0"
-                  target="_blank"
-                  class="flex items-center space-x-3 transition hover:text-primary"
-                >
-                  (41) 99191-2258.
-                </a>
-              </p>
-              <ul class="text-gray-600 dark:text-gray-300">
-                <span>Valor:</span>
-                {
-                  product.data.paymentsMethods.map((item) => (
-                    <li>
-                      {item.name}: R${item.price} + frete {item.disclaimer}
-                      {/* TODO: criar um tooltip para exibir o disclaimer */}
-                    </li>
-                  ))
-                }
-              </ul>
+              {
+                product.data.freezed ? (
+                <p class="my-4 text-gray-600 dark:text-gray-300">
+                  {product.data.note}
+                </p>
+                ): (
+                  <p class="my-4 text-gray-600 dark:text-gray-300">
+                  O {product.data.title} está disponível para compra pela lista de
+                  espera. Abrimos lotes para pré-venda de tempos em tempos e avisamos
+                  aos primeiros colocados da lista de espera, com isso, fazemos a venda
+                  e estipulamos um prazo de envio. Para participar da lista de espera,
+                  por favor, mande uma mensagem no WhatsApp:
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=5541991912258&text&type=phone_number&app_absent=0"
+                    target="_blank"
+                    class="flex items-center space-x-3 transition hover:text-primary"
+                  >
+                    (41) 99191-2258.
+                  </a>
+                </p>
+                <ul class="text-gray-600 dark:text-gray-300">
+                  <span>Valor:</span>
+                  {
+                    product.data.paymentsMethods.map((item) => (
+                      <li>
+                        {item.name}: R${item.price} + frete {item.disclaimer}
+                        {/* TODO: criar um tooltip para exibir o disclaimer */}
+                      </li>
+                    ))
+                  }
+                </ul>
+                )
+              }
+              
             </div>
             <div class="tab-content hidden rounded-lg p-4" data-content="2">
               <div class="flex flex-wrap">
@@ -257,7 +270,7 @@ const { tecInfo, reviews } = product.data;
             <div
               class="gallery-container relative mx-auto w-full max-w-4xl overflow-hidden"
             >
-              <!-- Contêiner do carrossel com 3 vídeos -->
+              <!-- Contêiner do carrossel com os vídeos -->
               <div
                 id="video-carousel"
                 class="flex items-center transition-transform duration-500 ease-out"
@@ -265,13 +278,14 @@ const { tecInfo, reviews } = product.data;
                 data-available-videos={JSON.stringify(reviews)}
               >
                 {
-                  reviews.map((video, index) => (
+                  reviews.map((video: string, index: number) => (
                     <div class="video-wrapper h-500 relative mx-2 w-[80%] flex-shrink-0">
                       <iframe
                         id="gallery-video"
                         class="h-96 w-full rounded-lg object-contain shadow-lg"
                         src={video}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen
                       />
                     </div>
@@ -281,7 +295,7 @@ const { tecInfo, reviews } = product.data;
               <!-- Botões de navegação -->
               <button
                 id="prev-btn"
-                class="absolute left-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-500 bg-opacity-50 px-4 py-2 text-primary transition hover:scale-110 hover:bg-opacity-75"
+                class=`${handleReviewsBehaviour() ? 'hidden': 'absolute'} left-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-500 bg-opacity-50 px-4 py-2 text-primary transition hover:scale-110 hover:bg-opacity-75`
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +313,7 @@ const { tecInfo, reviews } = product.data;
               </button>
               <button
                 id="next-btn"
-                class="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-500 bg-opacity-50 px-4 py-2 text-primary transition hover:scale-110 hover:bg-opacity-75"
+                class=`${handleReviewsBehaviour() ? 'hidden': 'absolute'} right-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-500 bg-opacity-50 px-4 py-2 text-primary transition hover:scale-110 hover:bg-opacity-75`
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

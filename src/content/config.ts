@@ -15,6 +15,8 @@ const productCollection = defineCollection({
             content: z.string()
         }),
         description: z.array(z.string()),
+        freezed: z.boolean().optional(),
+        note: z.string().optional(),
         paymentsMethods:z.array(z.object({
             name: z.string(),
             price: z.string(),
